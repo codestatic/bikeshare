@@ -1,4 +1,12 @@
-<h1> US Bikeshare Data Analysis </h1>
-<p>This program takes user input and displays the raw data that is requested from the bikeshare data.</p>
+<h2> US Bikeshare Data Analysis Project </h2>
 
-<h2>Helpful Links</h2>
+<h1>Date Created</h1>
+Created on July 6 2021
+
+<h1>Description</h1>
+This is a Udacity student project analysing US Bikeshare data. It looks at the cities of Chicago,
+New York, and Washington using python.
+
+<h1>Software Used</h1>
+text editor for Python
+git bash shell
