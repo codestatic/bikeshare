@@ -55,6 +55,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    # loading data from csv file
     df = pd.read_csv(CITY_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -131,11 +132,11 @@ def trip_duration_stats(df):
 
     # display total travel time
     travel_time = df['Trip Duration'].sum()
-    print('The total travel time is:', (travel_time/86400).round(1), 'days.')
+    print('The total travel time is:', (travel_time / 86400).round(1), 'days.')
 
     # display mean travel time
     average_travel_time = df['Trip Duration'].mean()
-    print('The average travel time is:', (average_travel_time/60).round(2), 'minutes.')
+    print('The average travel time is:', (average_travel_time / 60).round(2), 'minutes.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
@@ -155,7 +156,7 @@ def user_stats(df):
     if 'Gender' in df:
         print('Number of male and female riders:\n', df['Gender'].value_counts())
 
-    # Display earliest, most recent, and most common year of birth
+    # Display earliest, recent, and common year of birth
     if 'Birth Year' in df:
         earliest_birth = int(df['Birth Year'].min())
         print('The earliest year of birth is:', earliest_birth)
